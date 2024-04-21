@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+.Main__Container {
+    background: url("/jb-desktop-bg.png");
+    height: 100%;
+}
+/* * Home */
+/* ? Navbar Start */
+#Navbar__Container,
+.Search__Outside {
+    border: none;
+    li {
+        color: white;
+        font-family: "Nunito", sans-serif;
+        font-size: max(1.2vw, 14px);
+        cursor: pointer;
+    }
+    background-image: linear-gradient(
+        to right bottom,
+        #b1242c,
+        #bb2831,
+        #c62d35,
+        #d0313a,
+        #db353f
+    );
+    .container {
+        position: relative;
+        --size-button: 40px;
+        color: white;
+    }
+
+    .input {
+        padding-left: var(--size-button);
+        height: var(--size-button);
+        font-size: 15px;
+        border: none;
+        color: #fff;
+        outline: none;
+        width: var(--size-button);
+        transition: all ease 0.3s;
+        background-image: linear-gradient(
+            to right,
+            #c12b33,
+            #ba2830,
+            #b2252c,
+            #ab2229,
+            #a41f26
+        );
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .input:focus,
+    .input:not(:invalid) {
+        width: 200px;
+        cursor: text;
+        box-shadow: 0px 0px 0px #0e0e0e, 0px 0px 0px rgb(95 94 94 / 25%),
+            inset 1.5px 1.5px 3px #0e0e0e, inset -1.5px -1.5px 3px #5f5e5e;
+    }
+
+    .input:focus + .icon,
+    .input:not(:invalid) + .icon {
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .container .icon {
+        position: absolute;
+        width: var(--size-button);
+        height: var(--size-button);
+        top: 0;
+        left: 0;
+        padding: 8px;
+        pointer-events: none;
+    }
+
+    .container .icon svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+#Navbar__Container {
+    .animated-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 2px 36px;
+        border: 4px solid;
+        border-color: transparent;
+        font-size: 16px;
+        background-color: inherit;
+        border-radius: 100px;
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        box-shadow: 0 0 0 2px rgb(255, 255, 255);
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button svg {
+        position: absolute;
+        width: 24px;
+        fill: rgb(255, 255, 255);
+        z-index: 9;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .arr-1 {
+        right: 16px;
+    }
+
+    .animated-button .arr-2 {
+        left: -25%;
+    }
+
+    .animated-button .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .text {
+        position: relative;
+        z-index: 1;
+        transform: translateX(-12px);
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button:hover {
+        box-shadow: 0 0 0 12px transparent;
+        color: #212121;
+        border-radius: 12px;
+    }
+
+    .animated-button:hover .arr-1 {
+        right: -25%;
+    }
+
+    .animated-button:hover .arr-2 {
+        left: 16px;
+    }
+
+    .animated-button:hover .text {
+        transform: translateX(12px);
+    }
+
+    .animated-button:hover svg {
+        fill: #212121;
+    }
+
+    .animated-button:active {
+        scale: 0.95;
+        box-shadow: 0 0 0 4px rgb(255, 217, 1);
+    }
+
+    .animated-button:hover .circle {
+        width: 220px;
+        height: 220px;
+        opacity: 1;
+    }
+}
+
+/* ? Cover */
+.Categories__Title {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+}
+.Image__Background {
+    background-image: linear-gradient(
+        to right top,
+        #ce5151,
+        #db6751,
+        #e57e52,
+        #ee9456,
+        #f4ab5d,
+        #f1a85a,
+        #eea657,
+        #eba354,
+        #de8746,
+        #d06b3c,
+        #c04f35,
+        #ae3030
+    );
+}
+.Card__Product {
+    background-image: linear-gradient(
+        to bottom,
+        #fffed73a,
+        #ffea0029,
+        #fff19699,
+        #e88700,
+        #ffeca9af
+    );
+}
+.Card__Footer {
+    background-image: linear-gradient(
+        to right bottom,
+        #e83758,
+        #e22d4c,
+        #db213f,
+        #d41433,
+        #cd0026
+    );
+}
+.Product__Wrapper {
+    padding: 1rem;
+}
+.Contact__Container {
+    font-family: "Nunito", sans-serif;
+    background-image: linear-gradient(
+        to top,
+        #e4163d,
+        #e41139,
+        #e30c34,
+        #e30630,
+        #e2002b
+    );
+    li {
+        cursor: pointer;
+    }
+}
+.Contact__Title {
+    font-weight: 800;
+}
+.Social__Wrapper {
+    .card {
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(238, 238, 238);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 25px;
+        gap: 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    }
+
+    /* for all social containers*/
+    .socialContainer {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition-duration: 0.3s;
+    }
+    /* instagram*/
+    .containerOne:hover {
+        background-image: linear-gradient(
+            to right top,
+            #515bce,
+            #b154ba,
+            #e4599b,
+            #fc727e,
+            #ff966b,
+            #fe9867,
+            #fd9b64,
+            #fc9d60,
+            #f77b64,
+            #e95b6e,
+            #d1407c,
+            #ae308b
+        );
+        transition-duration: 0.3s;
+    }
+    /* twitter*/
+    .containerTwo:hover {
+        background-color: #0866ff;
+        transition-duration: 0.3s;
+    }
+    /* linkdin*/
+    .containerThree:hover {
+        background-color: #00aaec;
+        transition-duration: 0.3s;
+    }
+
+    .socialContainer:active {
+        transform: scale(0.9);
+        transition-duration: 0.3s;
+    }
+
+    .socialContainer:hover .socialSvg {
+        animation: slide-in-top 0.3s both;
+    }
+
+    @keyframes slide-in-top {
+        0% {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+.product-image {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.Background__Category {
+    background-image: linear-gradient(
+        to right top,
+        #ffc800,
+        #fac000,
+        #f3cb00,
+        #ec9100,
+        #e36a00
+    );
+}
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Card__Animation {
+    animation: cardEntrance 0.8s ease forwards;
+}
+.Added__Items {
+    display: none;
+}
+/* ? Navbar End */
+/* ? For Admin Start */
+.All_product__Wrapper {
+    height: 89vh;
+}
+.All_product__Wrapper::-webkit-scrollbar {
+    display: none;
+}
+.All_Product__Component {
+    height: 70vh;
+}
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Modal__Editing {
+    height: 30rem;
+    width: 53rem;
+    border-radius: 18px;
+    position: absolute;
+    background-image: linear-gradient(
+        to right bottom,
+        #ffffffef,
+        #fffcffed,
+        #fffaf9f1,
+        #fff9eef3,
+        #fffce6ed
+    );
+    overflow-y: scroll;
+    animation: modalFadeIn 0.5s ease-in-out forwards;
+}
+@media only screen and (max-device-width: 480px) {
+    .Modal__Editing {
+        height: auto;
+        width: 90vw;
+        border-radius: 12px;
+    }
+}
+
+.Modal__Editing::-webkit-scrollbar {
+    display: none;
+}
+.Text__Area::-webkit-scrollbar {
+    display: none;
+}
+/* ? For Admin End */
